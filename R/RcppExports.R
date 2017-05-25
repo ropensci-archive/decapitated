@@ -16,3 +16,10 @@ instrument <- function(ws_ptr, cmd) {
     .Call('decapitated_instrument', PACKAGE = 'decapitated', ws_ptr, cmd)
 }
 
+#' Consume event
+#'
+#' @export
+ws_poll <- function(ws_ptr, timeout = 5L) {
+    .Call('decapitated_ws_poll', PACKAGE = 'decapitated', ws_ptr, timeout)
+}
+
