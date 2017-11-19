@@ -12,7 +12,7 @@ decapitate <- function(port=9222L, url=NULL) {
   if (!is.null(url)) args <- c(args, "--dump-dom", url)
 
 
-  tmp <- system2(chrome_bin, args, wait=FALSE, stdout=tf, stderr=tf)
+  tmp <- system2(chrome_bin(), args, wait=FALSE, stdout=tf, stderr=tf)
 
   message(sprintf("Log file is at [%s]", tf))
 

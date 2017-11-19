@@ -1,1 +1,3 @@
-chrome_bin <- Sys.getenv("HEADLESS_CHROME")
+chrome_bin <- function() {
+  Sys.getenv("HEADLESS_CHROME")
+}

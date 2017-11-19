@@ -7,7 +7,7 @@
 #' @examples
 #' chrome_read_html("https://www.r-project.org/")
 chrome_read_html <- function(url) {
-  tmp <- system2(chrome_bin, c("--version", "--headless", "--disable-gpu", "--dump-dom", url), stdout=TRUE)
+  tmp <- system2(chrome_bin(), c("--version", "--headless", "--disable-gpu", "--dump-dom", url), stdout=TRUE)
   xml2::read_html(tmp)
 }
 
@@ -20,7 +20,7 @@ chrome_read_html <- function(url) {
 #' @examples
 #' chrome_dump_pdf("https://www.r-project.org/")
 chrome_dump_pdf <- function(url) {
-  tmp <- system2(chrome_bin, c("--version", "--headless", "--disable-gpu", "--print-to-pdf", url))
+  tmp <- system2(chrome_bin(), c("--version", "--headless", "--disable-gpu", "--print-to-pdf", url))
 }
 
 #' Capture a screenshot
@@ -48,7 +48,7 @@ chrome_shot <- function(url, width=NULL, height=NULL) {
 
   args <- c(args, url)
 
-  tmp <- system2(chrome_bin, args)
+  tmp <- system2(chrome_bin(), args)
 
   magick::image_read("screenshot.png")
 

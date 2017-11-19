@@ -1,4 +1,4 @@
 #' Get Chrome version
 #'
 #' @export
-chrome_version <- function(x) { system2(chrome_bin, "--version") }
+chrome_version <- function(x) { system2(chrome_bin(), "--version") }
