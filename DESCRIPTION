@@ -10,8 +10,8 @@ Description: The 'Chrome' browser <https://www.google.com/chrome/> has a headles
     'Chrome' instrumentation on the command-line and will eventually provide support
     for the 'DevTools' instrumentation 'API' or the forthcoming 'phantomjs'-like higher-level
     'API' being promised by the development team.
-URL: https://github.com/hrbrmstr/decapitated
-BugReports: https://github.com/hrbrmstr/decapitated/issues
+URL: https://github.com/ropenscilabs/decapitated
+BugReports: https://github.com/ropenscilabs/decapitated/issues
 License: AGPL
 SystemRequirements: Chrome 59+
 Suggests:
